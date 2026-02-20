@@ -16,6 +16,4 @@ services:
 
 databases:
   - name: tinder-db
-    databaseName: tinder
-    user: tinder
     plan: free
