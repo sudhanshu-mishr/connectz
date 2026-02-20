@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: tinder-clone
+    env: python
+    buildCommand: pip install -r requirements.txt && cd frontend && npm ci && npm run build && cd ..
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tinder-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://tinder-clone.onrender.com
+
+databases:
+  - name: tinder-db
+    databaseName: tinder
+    user: tinder
+    plan: free

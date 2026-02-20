@@ -1,0 +1,13 @@
+
+> tinder-clone-frontend@0.0.0 build
+> vite build
+
+vite v4.5.14 building for production...
+transforming...
+✓ 1418 modules transformed.
+rendering chunks...
+computing gzip size...
+../app/static/index.html                   0.45 kB │ gzip:  0.29 kB
+../app/static/assets/index-20f596ba.css   10.69 kB │ gzip:  2.86 kB
+../app/static/assets/index-647f02e8.js   214.16 kB │ gzip: 72.34 kB
+✓ built in 8.16s
